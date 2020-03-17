@@ -1,0 +1,34 @@
+body{
+    background-color: lavender;
+    margin:0;
+}
+.wrapper{
+    display: block;
+    margin: 0 auto;
+    max-width: 70vw;
+}
+
+.top_grid{
+    background-color: orange;
+    display:grid;
+    height: 60vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "left right" "left botright";
+    
+}
+
+.join_now{
+    grid-area: left;
+    background-color: orchid;
+}
+
+.learn{
+    grid-area: right;
+    background-color: brown;
+}
+
+.join{
+    grid-area: botright;
+    background-color: yellowgreen;
+}
