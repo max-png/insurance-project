@@ -6,6 +6,11 @@ body{
     font-weight: 100;
 }
 
+h1, p{
+    padding: 0;
+    margin: 0;
+}
+
 .wrapper{
     display: block;
     margin: 0 auto;
@@ -33,8 +38,11 @@ body{
     overflow: auto;
 }
 
-h1, p{
-    width: 60%;
+
+
+.join_now h1, .join_now p{
+    width: 70%;
+    
 }
 h2{
     color:white;
@@ -71,14 +79,13 @@ h2{
 }
 
 .menu_button{
+    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
     transition: border .5s, color .5s, background-color .5s 0s;
-    
-    
 }
 
 .menu_button:hover{
@@ -96,10 +103,6 @@ h2{
 
 .family_img{
     max-width: 55%;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
     align-self: flex-end;
 }
 
@@ -110,34 +113,72 @@ h2{
     width: 25%;
     border-radius: 24px;
     border-style: hidden;
+}
+.join_now .join_button{
+
+    top: 15%;
+    right: 10%;    
     position: relative;
-    top: 70px;
-    right: 50px;
 }
 
 .main_content{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: gray;
-    height: 1000px;
+    height: 100vh;
 }
 
-.main_content .left{
+.main_content .left, .main_content .right{
+    padding-left: 15%;
+    padding-right: 15%;
     height: 80vh;
-    margin-top: 10%;
-    margin-left: 10%;
+    padding-top: 15%;
 }
 
 .left h1{
     color: white;
-    margin-bottom: 15%;
-}
-
-.main_content .right{
-    background-color: violet;
-    height: 80vh;
+    
+    font-size: 3em;
+    text-shadow: 2px 2px #000;
 }
 
 .left .join_button{
-    position: static;
+    margin-top: 5%;
+}
+
+.right p{    
+    color: rgb(34, 34, 34);
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left_card{
+    background-color: cyan;
+}
+
+.mid_card{
+    background-color: green;
+}
+
+.right_card{
+    background-color: red;
+}
+
+.card_img{
+    background-color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 10%;
+    position: relative;
+    bottom: 100px;
 }
