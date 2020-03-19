@@ -131,7 +131,7 @@ h2 a:hover {
 }
 
 .navbar a {
-    color: rgb(12, 10, 10);
+    color: rgb(27, 22, 22);
     text-decoration: none;
     font-family: 'Roboto', 'sans-serif', verdana;
     font-weight: 400;
@@ -197,6 +197,7 @@ h2 a:hover {
     color: gray;
     padding: 1em;
     font-size: 0.8em;
+    text-align: center;
 }
 
 .cards h3 {
@@ -205,10 +206,6 @@ h2 a:hover {
 
 .cards img {
     max-height: 150px;
-}
-
-.cards p {
-    text-align: center;
 }
 
 .card_bg {
@@ -274,19 +271,17 @@ h2 a:hover {
 }
 
 .bot_grid {
-    
     display: grid;
     height: 80vh;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    
 }
 
-.bot_grid div{
+.bot_grid div {
     transition: transform .3s;
 }
 
-.bot_grid div:hover{
+.bot_grid div:hover {
     transform: scale(.95);
 }
 
@@ -294,14 +289,14 @@ h2 a:hover {
     background-color: white;
 }
 
-.bot_grid h3{
+.bot_grid h3 {
     margin: 18px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
     color: rgba(0, 0, 0, 0.534);
 }
 
-.bot_grid p{
+.bot_grid p {
     text-align: center;
     margin-top: 25%;
     font-weight: bold;
@@ -316,12 +311,15 @@ h2 a:hover {
     font-size: 1.4em;
 }
 
-.topleft h1{
+.topleft h1 {
     width: 50%;
 }
-.botmid {background-color: salmon;}
 
-#topBtn{
+.botmid {
+    background-color: salmon;
+}
+
+#topBtn {
     width: 100%;
     height: 10vh;
     border: none;
@@ -333,11 +331,11 @@ h2 a:hover {
     transition: transform 0.2s;
 }
 
-#topBtn:hover{
+#topBtn:hover {
     transform: scale(1.05);
 }
 
-.bottom{
+.bottom {
     height: 60vh;
     background-color: rgb(90, 90, 90);
 }
