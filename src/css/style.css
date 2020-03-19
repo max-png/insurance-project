@@ -6,12 +6,11 @@ body{
     font-weight: 100;
 }
 
-
-
 .wrapper{
     display: block;
     margin: 0 auto;
     width: 70vw;
+    min-width: 840px;
     max-width: 1920px;
     padding: 0;
 }
@@ -31,7 +30,6 @@ body{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    
 }
 
 .join_now{
@@ -59,7 +57,9 @@ body{
 }
 
 .join_now .join_button{
-
+    position: relative;
+    top: 18px;
+    right: 23%;
 }
 
 .join_button:hover{
