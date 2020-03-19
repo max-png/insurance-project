@@ -6,15 +6,13 @@ body{
     font-weight: 100;
 }
 
-h1, p{
-    padding: 0;
-    margin: 0;
-}
+
 
 .wrapper{
     display: block;
     margin: 0 auto;
-    max-width: 70vw;
+    width: 70vw;
+    max-width: 1920px;
     padding: 0;
 }
 
@@ -27,22 +25,49 @@ h1, p{
     grid-template-areas: "left right" "left botright";
 }
 
-.join_now, .learn, .join{    
-    grid-area: left;
-    background-color:rgb(82, 180, 204);
+.learn, .join{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    
+}
+
+.join_now{
+    background-color:rgb(82, 180, 204);
+    padding: 24px;
+    background-image: url('/img/family.png');
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
     overflow: auto;
 }
 
+.join_button{
+    font-weight: bold;
+    text-align: center;
+    height: 2.4em;
+    width: 25%;
+    border-radius: 24px;
+    border-style: hidden;
+}
 
+.join_now .join_button{
+
+}
+
+.join_button:hover{
+    background-color: darkgray;
+}
 
 .join_now h1, .join_now p{
     width: 70%;
-    
 }
 h2{
     color:white;
@@ -50,7 +75,7 @@ h2{
 
 .join_now h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    
 }
 
 .join_now p{
@@ -79,7 +104,6 @@ h2{
 }
 
 .menu_button{
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,24 +126,15 @@ h2{
 }
 
 .family_img{
-    max-width: 55%;
-    align-self: flex-end;
-}
-
-.join_button{
-    font-weight: bold;
-    text-align: center;
-    height: 2.4em;
-    width: 25%;
-    border-radius: 24px;
-    border-style: hidden;
-}
-.join_now .join_button{
-
-    top: 15%;
-    right: 10%;    
+    background-position: bottom right;
+    
+    background-size: cover;
     position: relative;
+    width: 150px;
+    height: 150px;
 }
+
+
 
 .main_content{
     display: grid;
@@ -152,33 +167,56 @@ h2{
 
 .cards{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    
+
 }
 
-article{
+.cards article{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+    
+    background-color: white;
 }
 
-.left_card{
-    background-color: cyan;
+.cards img{
+    max-height: 150px;
 }
 
-.mid_card{
-    background-color: green;
+.cards p{
+    text-align: center;
 }
 
-.right_card{
+.card_bg{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 10em;
+}
+.left_card .card_bg{
+    background-color: lightblue;
+}
+
+.left_card img{
+    background-color: lightblue;
+    
+}
+
+.mid_card .card_bg{
+    background-color: orange;
+}
+
+.mid_card img{
+    background-color: orange;
+    
+}
+
+.right_card .card_bg{
     background-color: red;
 }
 
-.card_img{
-    background-color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 10%;
-    position: relative;
-    bottom: 100px;
+.right_card img{
+    width: 80%;
+    background-color: red;
 }
