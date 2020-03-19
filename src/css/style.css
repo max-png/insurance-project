@@ -73,6 +73,17 @@ h2{
     color:white;
 }
 
+h2 a{
+    color: white;
+    text-decoration: none;
+    transition: color .3s, font-size .3s;
+}
+
+h2 a:hover{
+    color: rgb(204, 204, 204);
+    font-size: 1.2em;
+}
+
 .join_now h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
@@ -96,11 +107,13 @@ h2{
 }
 
 .navbar{
+    z-index: 1000;
     position: sticky;
     top: 0;
     display: flex;
     background-color: white;
     height: 55px;
+    border-bottom: gray 2px solid;
 }
 
 .menu_button{
@@ -127,7 +140,6 @@ h2{
 
 .family_img{
     background-position: bottom right;
-    
     background-size: cover;
     position: relative;
     width: 150px;
@@ -150,9 +162,8 @@ h2{
     padding-top: 15%;
 }
 
-.left h1{
+.left h1, .bot_half h1{
     color: white;
-    
     font-size: 3em;
     text-shadow: 2px 2px #000;
 }
@@ -161,22 +172,39 @@ h2{
     margin-top: 5%;
 }
 
-.right p{    
+.right p, .bot_half p{
+    margin: 39px;
     color: rgb(34, 34, 34);
 }
 
 .cards{
     display: flex;
-    
-
+    justify-content: space-evenly;
+    background-color: orange;
 }
 
 .cards article{
+    border: 2px solid rgba(63, 63, 63, 0.726);
+    position: relative;
+    bottom: 6em;
+    background-color: white;
+    border-radius: 8px;
+    width: 14em;
     display: flex;
     align-items: center;
     flex-direction: column;
     
-    background-color: white;
+}
+
+.cards p{
+    margin-top: 0;
+    color:gray;
+    padding: 1em;
+    font-size: 0.8em;
+}
+
+.cards h3{
+    margin-bottom: 0;
 }
 
 .cards img{
@@ -188,12 +216,25 @@ h2{
 }
 
 .card_bg{
+    padding-top: 0.6em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
     display: flex;
     align-content: center;
     justify-content: center;
     border-radius: 8px;
-    width: 10em;
+    height: 8em;
+    width: 12em;
+    position: relative;
+    bottom: 1em;
+    transition: bottom 0.5s, transform 1.5s;
 }
+
+.card_bg:hover{
+    transform: rotate(360deg);
+    bottom: 3em;
+}
+
 .left_card .card_bg{
     background-color: lightblue;
 }
@@ -213,10 +254,34 @@ h2{
 }
 
 .right_card .card_bg{
-    background-color: red;
+    background-color:lightsalmon;
 }
 
 .right_card img{
     width: 80%;
-    background-color: red;
+}
+
+.bot_half{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bot_half h1{
+    margin: 0;
+}
+
+.bot_half p{
+    text-align: center;
+    margin: 14px;
+    width: 55%;
+}
+
+.bot_grid{
+    background-color: blue;
+    display:grid;
+    height: 80vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
 }
